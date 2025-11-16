@@ -1,0 +1,838 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Art of Atmen - 13 Comprehensive Yoga & Wellness Programs for Corporate Health Transformation. Online classes for B2C individuals and B2B corporate wellness solutions with 700%+ ROI.">
+    <meta name="keywords" content="yoga, corporate wellness, online classes, stress management, yoga programs, mental health, fitness, India">
+    <meta name="author" content="Art of Atmen">
+    <title>Art of Atmen - Corporate Wellness & Yoga Programs</title>
+    
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        :root {
+            --primary: #2D5F8D;
+            --secondary: #F5A623;
+            --text-dark: #2C3E50;
+            --text-light: #7F8C8D;
+            --bg-light: #F8FAFB;
+            --bg-white: #FFFFFF;
+            --border: #ECF0F1;
+            --success: #27AE60;
+        }
+        html { font-size: 16px; scroll-behavior: smooth; }
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            color: var(--text-dark);
+            line-height: 1.6;
+            background-color: var(--bg-white);
+        }
+        .container { max-width: 1200px; margin: 0 auto; padding: 0 1.5rem; }
+        header {
+            background: white;
+            border-bottom: 1px solid var(--border);
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        }
+        .header-content {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 1rem 0;
+        }
+        .logo {
+            font-size: 1.5rem;
+            font-weight: 700;
+            color: var(--primary);
+            text-decoration: none;
+        }
+        .nav {
+            display: flex;
+            gap: 2rem;
+            list-style: none;
+        }
+        .nav a {
+            color: var(--text-dark);
+            text-decoration: none;
+            font-weight: 500;
+            transition: color 0.3s;
+        }
+        .nav a:hover {
+            color: var(--primary);
+        }
+        .nav .btn {
+            background: var(--primary);
+            color: white;
+            padding: 0.75rem 1.5rem;
+            border-radius: 4px;
+            transition: all 0.3s;
+        }
+        .nav .btn:hover {
+            background: #1e3f5a;
+            transform: translateY(-2px);
+        }
+        .mobile-menu {
+            display: none;
+            background: none;
+            border: none;
+            font-size: 1.5rem;
+            cursor: pointer;
+        }
+        .hero {
+            background: linear-gradient(135deg, var(--primary) 0%, #1e3f5a 100%);
+            color: white;
+            padding: 5rem 0;
+            text-align: center;
+        }
+        .hero h1 {
+            font-size: 3rem;
+            margin-bottom: 1rem;
+            line-height: 1.2;
+        }
+        .hero p {
+            font-size: 1.2rem;
+            margin-bottom: 2rem;
+            opacity: 0.95;
+        }
+        .hero-buttons {
+            display: flex;
+            gap: 1rem;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+        .btn {
+            display: inline-block;
+            padding: 1rem 2rem;
+            border-radius: 4px;
+            font-weight: 600;
+            text-decoration: none;
+            border: none;
+            cursor: pointer;
+            transition: all 0.3s;
+            font-size: 1rem;
+        }
+        .btn-primary {
+            background: var(--primary);
+            color: white;
+        }
+        .btn-primary:hover {
+            background: #1e3f5a;
+            transform: translateY(-2px);
+        }
+        .btn-secondary {
+            background: var(--secondary);
+            color: white;
+        }
+        .btn-secondary:hover {
+            background: #d48914;
+            transform: translateY(-2px);
+        }
+        .stats {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 2rem;
+            padding: 4rem 0;
+        }
+        .stat {
+            background: linear-gradient(135deg, var(--primary), #1e3f5a);
+            color: white;
+            padding: 2rem;
+            border-radius: 8px;
+            text-align: center;
+        }
+        .stat-number {
+            font-size: 2.5rem;
+            font-weight: bold;
+            margin-bottom: 0.5rem;
+        }
+        .section {
+            padding: 4rem 0;
+        }
+        .section h2 {
+            font-size: 2.5rem;
+            text-align: center;
+            margin-bottom: 1rem;
+            color: var(--primary);
+        }
+        .section-subtitle {
+            text-align: center;
+            color: var(--text-light);
+            margin-bottom: 3rem;
+            font-size: 1.1rem;
+        }
+        .programs-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 2rem;
+        }
+        .program-card {
+            background: white;
+            border: 1px solid var(--border);
+            border-radius: 8px;
+            padding: 2rem;
+            transition: all 0.3s;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+        }
+        .program-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 30px rgba(0,0,0,0.15);
+            border-color: var(--secondary);
+        }
+        .program-icon {
+            font-size: 2.5rem;
+            margin-bottom: 1rem;
+        }
+        .program-card h3 {
+            font-size: 1.3rem;
+            margin-bottom: 0.75rem;
+        }
+        .program-card p {
+            color: var(--text-light);
+            margin-bottom: 1.5rem;
+        }
+        .pricing-section {
+            background: var(--bg-light);
+            padding: 4rem 0;
+        }
+        .pricing-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+            margin-top: 3rem;
+        }
+        .pricing-card {
+            background: white;
+            border: 2px solid var(--border);
+            border-radius: 8px;
+            padding: 2.5rem;
+            text-align: center;
+            transition: all 0.3s;
+            position: relative;
+        }
+        .pricing-card.featured {
+            border-color: var(--secondary);
+            transform: scale(1.05);
+            box-shadow: 0 10px 30px rgba(245, 166, 35, 0.2);
+        }
+        .pricing-card.featured::before {
+            content: "Most Popular";
+            position: absolute;
+            top: -12px;
+            left: 50%;
+            transform: translateX(-50%);
+            background: var(--secondary);
+            color: white;
+            padding: 0.5rem 1.5rem;
+            border-radius: 20px;
+            font-weight: 600;
+            font-size: 0.9rem;
+        }
+        .plan-name {
+            font-size: 1.5rem;
+            font-weight: 600;
+            margin-bottom: 1rem;
+        }
+        .plan-price {
+            font-size: 3rem;
+            font-weight: bold;
+            color: var(--primary);
+            margin-bottom: 0.5rem;
+        }
+        .plan-price-sub {
+            color: var(--text-light);
+            margin-bottom: 2rem;
+        }
+        .plan-features {
+            list-style: none;
+            margin: 2rem 0;
+            text-align: left;
+        }
+        .plan-features li {
+            padding: 0.75rem 0;
+            border-bottom: 1px solid var(--border);
+        }
+        .plan-features li::before {
+            content: "✓ ";
+            color: var(--success);
+            font-weight: bold;
+        }
+        .plan-features li:last-child {
+            border-bottom: none;
+        }
+        .cta {
+            background: linear-gradient(135deg, var(--primary), #1e3f5a);
+            color: white;
+            padding: 4rem 0;
+            text-align: center;
+            margin: 4rem 0;
+            border-radius: 8px;
+        }
+        .cta h2 {
+            color: white;
+            font-size: 2.5rem;
+            margin-bottom: 1rem;
+        }
+        .cta p {
+            font-size: 1.1rem;
+            margin-bottom: 2rem;
+            opacity: 0.95;
+        }
+        .cta-buttons {
+            display: flex;
+            gap: 1rem;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+        .testimonials {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+            margin-top: 3rem;
+        }
+        .testimonial {
+            background: white;
+            border: 1px solid var(--border);
+            border-radius: 8px;
+            padding: 2rem;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+        }
+        .stars {
+            color: var(--secondary);
+            font-size: 1.2rem;
+            margin-bottom: 1rem;
+        }
+        .testimonial-text {
+            font-style: italic;
+            color: var(--text-light);
+            margin-bottom: 1rem;
+        }
+        .testimonial-author {
+            font-weight: 600;
+        }
+        .testimonial-title {
+            color: var(--text-light);
+            font-size: 0.9rem;
+        }
+        .modal {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: rgba(0,0,0,0.5);
+            z-index: 2000;
+            align-items: center;
+            justify-content: center;
+        }
+        .modal.active {
+            display: flex;
+        }
+        .modal-content {
+            background: white;
+            padding: 2rem;
+            border-radius: 8px;
+            max-width: 500px;
+            width: 90%;
+            box-shadow: 0 10px 40px rgba(0,0,0,0.3);
+        }
+        .modal-close {
+            float: right;
+            font-size: 2rem;
+            cursor: pointer;
+            background: none;
+            border: none;
+            color: var(--text-light);
+        }
+        .modal-close:hover {
+            color: var(--text-dark);
+        }
+        .modal h2 {
+            text-align: left;
+            margin-top: 1rem;
+            margin-bottom: 1.5rem;
+        }
+        .form-group {
+            margin-bottom: 1.5rem;
+        }
+        .form-group label {
+            display: block;
+            margin-bottom: 0.5rem;
+            font-weight: 500;
+        }
+        .form-group input,
+        .form-group select,
+        .form-group textarea {
+            width: 100%;
+            padding: 0.75rem;
+            border: 1px solid var(--border);
+            border-radius: 4px;
+            font-size: 1rem;
+            font-family: inherit;
+        }
+        .form-group input:focus,
+        .form-group select:focus,
+        .form-group textarea:focus {
+            outline: none;
+            border-color: var(--primary);
+            box-shadow: 0 0 0 3px rgba(45, 95, 141, 0.1);
+        }
+        footer {
+            background: var(--text-dark);
+            color: white;
+            padding: 3rem 0 1rem;
+            margin-top: 4rem;
+        }
+        .footer-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 2rem;
+            margin-bottom: 2rem;
+        }
+        .footer-section h4 {
+            color: white;
+            margin-bottom: 1rem;
+        }
+        .footer-section ul {
+            list-style: none;
+        }
+        .footer-section ul li {
+            margin-bottom: 0.5rem;
+        }
+        .footer-section a {
+            color: rgba(255,255,255,0.7);
+            text-decoration: none;
+        }
+        .footer-section a:hover {
+            color: white;
+        }
+        .footer-bottom {
+            border-top: 1px solid rgba(255,255,255,0.1);
+            padding-top: 2rem;
+            text-align: center;
+            color: rgba(255,255,255,0.6);
+        }
+        @media (max-width: 768px) {
+            .nav { display: none; }
+            .mobile-menu { display: block; }
+            .hero h1 { font-size: 1.8rem; }
+            .hero-buttons { flex-direction: column; }
+            .hero-buttons .btn { width: 100%; }
+            .section h2 { font-size: 1.8rem; }
+            .programs-grid, .pricing-grid, .testimonials { grid-template-columns: 1fr; }
+            .pricing-card.featured { transform: scale(1); }
+            .cta-buttons { flex-direction: column; }
+            .cta-buttons .btn { width: 100%; }
+            .footer-grid { grid-template-columns: 1fr; }
+        }
+    </style>
+</head>
+<body>
+
+<!-- HEADER -->
+<header>
+    <div class="container">
+        <div class="header-content">
+            <a href="#" class="logo">🧘 Art of Atmen</a>
+            <nav class="nav">
+                <a href="#programs">Programs</a>
+                <a href="#pricing">Pricing</a>
+                <a href="#corporate">Corporate</a>
+                <a href="#testimonials">Testimonials</a>
+                <button onclick="openModal('signupModal')" class="btn">Sign Up</button>
+            </nav>
+            <button class="mobile-menu" onclick="toggleMenu()">☰</button>
+        </div>
+    </div>
+</header>
+
+<!-- HERO -->
+<section class="hero">
+    <div class="container">
+        <h1>Transform Your Wellness Journey</h1>
+        <p>13 Comprehensive Yoga & Wellness Programs for Individual Health & Corporate Transformation</p>
+        <div class="hero-buttons">
+            <button onclick="openModal('signupModal')" class="btn btn-primary">Start Free 7-Day Trial</button>
+            <button onclick="openModal('corporateModal')" class="btn btn-secondary">Corporate Solutions</button>
+        </div>
+    </div>
+</section>
+
+<!-- STATS -->
+<section>
+    <div class="container">
+        <div class="stats">
+            <div class="stat">
+                <div class="stat-number">68%</div>
+                <div>Have Multiple Health Issues</div>
+            </div>
+            <div class="stat">
+                <div class="stat-number">35%</div>
+                <div>Experience Depression/Anxiety</div>
+            </div>
+            <div class="stat">
+                <div class="stat-number">66%</div>
+                <div>Have Poor Posture</div>
+            </div>
+            <div class="stat">
+                <div class="stat-number">45%</div>
+                <div>Report Low Energy</div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- PROGRAMS -->
+<section id="programs" class="section">
+    <div class="container">
+        <h2>13 Comprehensive Programs</h2>
+        <p class="section-subtitle">Complete Coverage of Corporate Health Issues</p>
+        <div class="programs-grid">
+            <div class="program-card">
+                <div class="program-icon">🦴</div>
+                <h3>Lower Back Pain Relief</h3>
+                <p>8-week program targeting lower back pain with lasting relief.</p>
+                <button onclick="selectProgram('back-pain')" class="btn btn-primary">Learn More</button>
+            </div>
+            <div class="program-card">
+                <div class="program-icon">🧠</div>
+                <h3>Neck & Shoulder Tension</h3>
+                <p>Comprehensive relief program for desk workers.</p>
+                <button onclick="selectProgram('neck-shoulder')" class="btn btn-primary">Learn More</button>
+            </div>
+            <div class="program-card">
+                <div class="program-icon">👁️</div>
+                <h3>Digital Eye Strain Relief</h3>
+                <p>Eye health restoration for digital professionals.</p>
+                <button onclick="selectProgram('eye-strain')" class="btn btn-primary">Learn More</button>
+            </div>
+            <div class="program-card">
+                <div class="program-icon">😌</div>
+                <h3>Stress & Anxiety Management</h3>
+                <p>8-week stress relief and anxiety management program.</p>
+                <button onclick="selectProgram('stress-anxiety')" class="btn btn-primary">Learn More</button>
+            </div>
+            <div class="program-card">
+                <div class="program-icon">😴</div>
+                <h3>Sleep Disorder Solutions</h3>
+                <p>Sleep quality improvement for better rest.</p>
+                <button onclick="selectProgram('sleep')" class="btn btn-primary">Learn More</button>
+            </div>
+            <div class="program-card">
+                <div class="program-icon">⚖️</div>
+                <h3>Weight & Metabolism Boost</h3>
+                <p>12-week program for weight loss and metabolic health.</p>
+                <button onclick="selectProgram('weight-metabolism')" class="btn btn-primary">Learn More</button>
+            </div>
+            <div class="program-card">
+                <div class="program-icon">🧘</div>
+                <h3>Posture Correction</h3>
+                <p>Postural rehabilitation for spinal alignment.</p>
+                <button onclick="selectProgram('posture')" class="btn btn-primary">Learn More</button>
+            </div>
+            <div class="program-card">
+                <div class="program-icon">🏃</div>
+                <h3>Hip & Flexibility Opening</h3>
+                <p>Deep hip opening for mobility and relief.</p>
+                <button onclick="selectProgram('hip-flexibility')" class="btn btn-primary">Learn More</button>
+            </div>
+            <div class="program-card">
+                <div class="program-icon">✋</div>
+                <h3>RSI & Wrist Health</h3>
+                <p>Repetitive strain injury prevention for keyboard workers.</p>
+                <button onclick="selectProgram('rsi-wrist')" class="btn btn-primary">Learn More</button>
+            </div>
+            <div class="program-card">
+                <div class="program-icon">⚡</div>
+                <h3>Energy & Circulation</h3>
+                <p>Cardiovascular activation and energy restoration.</p>
+                <button onclick="selectProgram('energy-circulation')" class="btn btn-primary">Learn More</button>
+            </div>
+            <div class="program-card">
+                <div class="program-icon">🔬</div>
+                <h3>Metabolic Syndrome Prevention</h3>
+                <p>Diabetes prevention and metabolic health restoration.</p>
+                <button onclick="selectProgram('metabolic-syndrome')" class="btn btn-primary">Learn More</button>
+            </div>
+            <div class="program-card">
+                <div class="program-icon">💝</div>
+                <h3>Mental Health & Wellbeing</h3>
+                <p>Depression relief and emotional resilience building.</p>
+                <button onclick="selectProgram('mental-health')" class="btn btn-primary">Learn More</button>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- PRICING -->
+<section id="pricing" class="section pricing-section">
+    <div class="container">
+        <h2>Simple, Transparent Pricing</h2>
+        <p class="section-subtitle">Choose the perfect plan for your wellness journey</p>
+        <div class="pricing-grid">
+            <div class="pricing-card">
+                <div class="plan-name">Basic</div>
+                <div class="plan-price">₹1,499</div>
+                <div class="plan-price-sub">/month</div>
+                <ul class="plan-features">
+                    <li>All 13 Programs</li>
+                    <li>2 Live Classes/Week</li>
+                    <li>Unlimited Recordings</li>
+                    <li>Basic Tracking</li>
+                </ul>
+                <button onclick="openModal('signupModal')" class="btn btn-primary" style="width:100%;">Get Started</button>
+            </div>
+            <div class="pricing-card featured">
+                <div class="plan-name">Standard</div>
+                <div class="plan-price">₹2,999</div>
+                <div class="plan-price-sub">/month</div>
+                <ul class="plan-features">
+                    <li>All 13 Programs</li>
+                    <li>Unlimited Live Classes</li>
+                    <li>Unlimited Recordings</li>
+                    <li>Monthly Coaching</li>
+                    <li>Community Support</li>
+                </ul>
+                <button onclick="openModal('signupModal')" class="btn btn-secondary" style="width:100%;">Get Started</button>
+            </div>
+            <div class="pricing-card">
+                <div class="plan-name">Premium</div>
+                <div class="plan-price">₹4,999</div>
+                <div class="plan-price-sub">/month</div>
+                <ul class="plan-features">
+                    <li>All 13 Programs</li>
+                    <li>Unlimited Live Classes</li>
+                    <li>Unlimited Recordings</li>
+                    <li>Weekly Coaching</li>
+                    <li>Priority Support</li>
+                    <li>Health Tracking</li>
+                </ul>
+                <button onclick="openModal('signupModal')" class="btn btn-primary" style="width:100%;">Get Started</button>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- CORPORATE -->
+<section id="corporate" class="section">
+    <div class="container">
+        <h2>Corporate Wellness Solutions</h2>
+        <p class="section-subtitle">Transform your company with proven results</p>
+        <div style="background: linear-gradient(135deg, var(--primary), #1e3f5a); color: white; padding: 3rem; border-radius: 8px; text-align: center;">
+            <h3 style="color: white; margin-bottom: 1rem; font-size: 2rem;">700-880% ROI</h3>
+            <p style="margin-bottom: 2rem; font-size: 1.1rem;">Complete 52-week corporate wellness platform with measurable results</p>
+            <button onclick="openModal('corporateModal')" class="btn btn-secondary">Schedule Demo</button>
+        </div>
+    </div>
+</section>
+
+<!-- TESTIMONIALS -->
+<section id="testimonials" class="section">
+    <div class="container">
+        <h2>Success Stories</h2>
+        <div class="testimonials">
+            <div class="testimonial">
+                <div class="stars">★★★★★</div>
+                <p class="testimonial-text">"Program 4 completely changed how I manage stress. My anxiety dropped 50% in just 8 weeks."</p>
+                <div class="testimonial-author">Priya M.</div>
+                <div class="testimonial-title">Software Engineer, Bangalore</div>
+            </div>
+            <div class="testimonial">
+                <div class="stars">★★★★★</div>
+                <p class="testimonial-text">"My company did the 52-week program. Productivity went up, sick leave went down."</p>
+                <div class="testimonial-author">Rajesh K.</div>
+                <div class="testimonial-title">HR Director, Mumbai</div>
+            </div>
+            <div class="testimonial">
+                <div class="stars">★★★★★</div>
+                <p class="testimonial-text">"Back pain that bothered me for 5 years is 80% gone. Amazing results!"</p>
+                <div class="testimonial-author">Anita S.</div>
+                <div class="testimonial-title">Manager, Delhi</div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- CTA -->
+<section class="cta">
+    <div class="container">
+        <h2>Ready to Transform Your Wellness?</h2>
+        <p>Join thousands of individuals and companies transforming their health</p>
+        <div class="cta-buttons">
+            <button onclick="openModal('signupModal')" class="btn btn-secondary">Start Free Trial</button>
+            <button onclick="openModal('corporateModal')" class="btn" style="background: white; color: var(--primary);">Corporate Inquiry</button>
+        </div>
+    </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+    <div class="container">
+        <div class="footer-grid">
+            <div class="footer-section">
+                <h4>Art of Atmen</h4>
+                <p>Comprehensive wellness programs for individuals and corporations.</p>
+            </div>
+            <div class="footer-section">
+                <h4>Programs</h4>
+                <ul>
+                    <li><a href="#programs">All Programs</a></li>
+                    <li><a href="#pricing">Pricing</a></li>
+                    <li><a href="#">Blog</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h4>Company</h4>
+                <ul>
+                    <li><a href="#">About Us</a></li>
+                    <li><a href="#">Contact</a></li>
+                    <li><a href="#">Privacy Policy</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h4>Contact</h4>
+                <p>Email: hello@artofatmen.in</p>
+                <p>Phone: +91-9876-543-210</p>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2025 Art of Atmen. All rights reserved. | <a href="#">Privacy</a> | <a href="#">Terms</a></p>
+        </div>
+    </div>
+</footer>
+
+<!-- SIGNUP MODAL -->
+<div id="signupModal" class="modal">
+    <div class="modal-content">
+        <button class="modal-close" onclick="closeModal('signupModal')">✕</button>
+        <h2>Start Your Free 7-Day Trial</h2>
+        <form onsubmit="handleSignup(event)">
+            <div class="form-group">
+                <label>Email *</label>
+                <input type="email" name="email" required>
+            </div>
+            <div class="form-group">
+                <label>Full Name *</label>
+                <input type="text" name="name" required>
+            </div>
+            <div class="form-group">
+                <label>Phone *</label>
+                <input type="tel" name="phone" required>
+            </div>
+            <div class="form-group">
+                <label>Choose Your Program *</label>
+                <select id="programSelect" name="program" required>
+                    <option>Select a program</option>
+                    <option value="back-pain">Program 1: Lower Back Pain Relief</option>
+                    <option value="neck-shoulder">Program 2: Neck & Shoulder Tension</option>
+                    <option value="eye-strain">Program 3: Digital Eye Strain</option>
+                    <option value="stress-anxiety">Program 4: Stress & Anxiety</option>
+                    <option value="sleep">Program 5: Sleep Disorders</option>
+                    <option value="weight-metabolism">Program 6: Weight & Metabolism</option>
+                    <option value="posture">Program 7: Posture Correction</option>
+                    <option value="hip-flexibility">Program 8: Hip & Flexibility</option>
+                    <option value="rsi-wrist">Program 9: RSI & Wrist Health</option>
+                    <option value="energy-circulation">Program 10: Energy & Circulation</option>
+                    <option value="metabolic-syndrome">Program 11: Metabolic Syndrome</option>
+                    <option value="mental-health">Program 12: Mental Health & Wellbeing</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <label>Preferred Plan *</label>
+                <select name="plan" required>
+                    <option>Select a plan</option>
+                    <option value="basic">Basic - ₹1,499/month</option>
+                    <option value="standard">Standard - ₹2,999/month</option>
+                    <option value="premium">Premium - ₹4,999/month</option>
+                </select>
+            </div>
+            <button type="submit" class="btn btn-primary" style="width:100%;">Start Free Trial</button>
+        </form>
+    </div>
+</div>
+
+<!-- CORPORATE MODAL -->
+<div id="corporateModal" class="modal">
+    <div class="modal-content">
+        <button class="modal-close" onclick="closeModal('corporateModal')">✕</button>
+        <h2>Corporate Wellness Inquiry</h2>
+        <form onsubmit="handleCorporate(event)">
+            <div class="form-group">
+                <label>Company Name *</label>
+                <input type="text" name="company" required>
+            </div>
+            <div class="form-group">
+                <label>Company Size *</label>
+                <select name="size" required>
+                    <option>Select size</option>
+                    <option>50-100</option>
+                    <option>100-500</option>
+                    <option>500-1000</option>
+                    <option>1000+</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <label>Your Email *</label>
+                <input type="email" name="email" required>
+            </div>
+            <div class="form-group">
+                <label>Your Phone *</label>
+                <input type="tel" name="phone" required>
+            </div>
+            <div class="form-group">
+                <label>Your Role *</label>
+                <input type="text" name="role" placeholder="e.g., HR Director" required>
+            </div>
+            <div class="form-group">
+                <label>Message</label>
+                <textarea name="message" rows="4" placeholder="Tell us about your wellness goals..."></textarea>
+            </div>
+            <button type="submit" class="btn btn-secondary" style="width:100%;">Schedule Demo</button>
+        </form>
+    </div>
+</div>
+
+<script>
+    function openModal(modalId) {
+        document.getElementById(modalId).classList.add('active');
+    }
+
+    function closeModal(modalId) {
+        document.getElementById(modalId).classList.remove('active');
+    }
+
+    window.onclick = function(event) {
+        if (event.target.classList.contains('modal')) {
+            event.target.classList.remove('active');
+        }
+    }
+
+    function selectProgram(program) {
+        document.getElementById('programSelect').value = program;
+        openModal('signupModal');
+    }
+
+    function handleSignup(event) {
+        event.preventDefault();
+        alert('Thank you! Check your email to start your free trial.');
+        closeModal('signupModal');
+        event.target.reset();
+    }
+
+    function handleCorporate(event) {
+        event.preventDefault();
+        alert('Thank you! Our team will contact you within 24 hours.');
+        closeModal('corporateModal');
+        event.target.reset();
+    }
+
+    function toggleMenu() {
+        const nav = document.querySelector('.nav');
+        nav.style.display = nav.style.display === 'flex' ? 'none' : 'flex';
+    }
+</script>
+
+</body>
+</html>
